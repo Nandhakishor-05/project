@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaGuard — Drinking Water Complaints Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <nav class="navbar glass" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4C20 4 8 18 8 26C8 33.732 13.268 39 21 39C28.732 39 34 33.732 34 26C34 18 20 4 20 4Z" fill="url(#dropGrad)"/>
+            <defs>
+              <linearGradient id="dropGrad" x1="20" y1="4" x2="20" y2="39" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#0284c7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#complaint">File Complaint</a></li>
+        <li><a href="#track">Track Status</a></li>
+        <li><a href="#project-info">Project Info</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta glass-btn" onclick="document.getElementById('complaint').scrollIntoView({behavior:'smooth'})">
+        Report Issue
+      </button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge glass reveal" data-delay="0">
+        <span class="pulse-dot"></span>
+        24/7 Water Quality Monitoring
+      </div>
+      <h1 class="hero-title reveal" data-delay="100">
+        Clean Water Is Your
+        <span class="gradient-text">Right</span>
+      </h1>
+      <p class="hero-subtitle reveal" data-delay="200">
+        Report drinking water issues instantly. Our dedicated team resolves contamination,
+        supply disruption, and quality concerns within 48 hours.
+      </p>
+      <div class="hero-actions reveal" data-delay="300">
+        <a href="#complaint" class="btn btn-primary">
+          <span>File a Complaint</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#track" class="btn btn-secondary glass-btn">Track Complaint</a>
+      </div>
+      <div class="hero-stats reveal" data-delay="400">
+        <div class="stat-item glass">
+          <span class="stat-number" data-target="12847">0</span>
+          <span class="stat-label">Issues Resolved</span>
+        </div>
+        <div class="stat-item glass">
+          <span class="stat-number" data-target="98">0</span>
+          <span class="stat-label">% Satisfaction</span>
+        </div>
+        <div class="stat-item glass">
+          <span class="stat-number" data-target="24">0</span>
+          <span class="stat-label">Hr Response</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="water-sphere" id="waterSphere">
+        <div class="sphere-inner">
+          <div class="sphere-glow"></div>
+          <div class="water-wave wave-1"></div>
+          <div class="water-wave wave-2"></div>
+          <div class="water-wave wave-3"></div>
+          <div class="sphere-reflection"></div>
+        </div>
+        <div class="orbit-ring ring-1">
+          <div class="orbit-dot"></div>
+        </div>
+        <div class="orbit-ring ring-2">
+          <div class="orbit-dot"></div>
+        </div>
+      </div>
+      <div class="floating-cards">
+        <div class="float-card glass card-1">
+          <div class="card-icon">💧</div>
+          <div>
+            <strong>Quality Test</strong>
+            <span>Passed — 99.2%</span>
+          </div>
+        </div>
+        <div class="float-card glass card-2">
+          <div class="card-icon">✅</div>
+          <div>
+            <strong>Complaint #4821</strong>
+            <span>Resolved in 6 hrs</span>
+          </div>
+        </div>
+        <div class="float-card glass card-3">
+          <div class="card-icon">🔬</div>
+          <div>
+            <strong>Lab Report</strong>
+            <span>Safe to drink</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-header reveal">
+      <span class="section-tag">What We Handle</span>
+      <h2>Common Water Complaint Categories</h2>
+      <p>We address every aspect of drinking water quality and supply in your area.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card glass reveal" data-delay="0">
+        <div class="service-icon-3d">
+          <div class="icon-cube">
+            <span>🚱</span>
+          </div>
+        </div>
+        <h3>Contamination</h3>
+        <p>Report discolored, foul-smelling, or chemically tainted water supply in your locality.</p>
+        <span class="service-tag">High Priority</span>
+      </div>
+      <div class="service-card glass reveal" data-delay="100">
+        <div class="service-icon-3d">
+          <div class="icon-cube">
+            <span>💧</span>
+          </div>
+        </div>
+        <h3>Supply Disruption</h3>
+        <p>No water flow, low pressure, or irregular supply timings affecting your household.</p>
+        <span class="service-tag">Medium Priority</span>
+      </div>
+      <div class="service-card glass reveal" data-delay="200">
+        <div class="service-icon-3d">
+          <div class="icon-cube">
+            <span>🔧</span>
+          </div>
+        </div>
+        <h3>Pipeline Damage</h3>
+        <p>Leaking pipes, burst mains, or damaged water infrastructure near your property.</p>
+        <span class="service-tag">Urgent</span>
+      </div>
+      <div class="service-card glass reveal" data-delay="300">
+        <div class="service-icon-3d">
+          <div class="icon-cube">
+            <span>🏭</span>
+          </div>
+        </div>
+        <h3>Quality Testing</h3>
+        <p>Request free water quality testing and receive a detailed lab analysis report.</p>
+        <span class="service-tag">Free Service</span>
+      </div>
+      <div class="service-card glass reveal" data-delay="400">
+        <div class="service-icon-3d">
+          <div class="icon-cube">
+            <span>💰</span>
+          </div>
+        </div>
+        <h3>Billing Issues</h3>
+        <p>Dispute incorrect water bills, meter readings, or unauthorized charges.</p>
+        <span class="service-tag">Standard</span>
+      </div>
+      <div class="service-card glass reveal" data-delay="500">
+        <div class="service-icon-3d">
+          <div class="icon-cube">
+            <span>🌊</span>
+          </div>
+        </div>
+        <h3>Flood & Sewage</h3>
+        <p>Report sewage mixing with drinking water or flood-related contamination events.</p>
+        <span class="service-tag">Critical</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="section-header reveal">
+      <span class="section-tag">How It Works</span>
+      <h2>Simple 4-Step Resolution Process</h2>
+    </div>
+    <div class="process-timeline">
+      <div class="timeline-line"></div>
+      <div class="process-step glass reveal" data-delay="0">
+        <div class="step-number">01</div>
+        <h3>Submit Complaint</h3>
+        <p>Fill out the online form with details about your water issue and location.</p>
+      </div>
+      <div class="process-step glass reveal" data-delay="150">
+        <div class="step-number">02</div>
+        <h3>Get Reference ID</h3>
+        <p>Receive a unique tracking number via SMS and email instantly.</p>
+      </div>
+      <div class="process-step glass reveal" data-delay="300">
+        <div class="step-number">03</div>
+        <h3>Field Inspection</h3>
+        <p>Our team visits your location within 24 hours for assessment.</p>
+      </div>
+      <div class="process-step glass reveal" data-delay="450">
+        <div class="step-number">04</div>
+        <h3>Issue Resolved</h3>
+        <p>Problem fixed and you receive a resolution confirmation report.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="complaint-section" id="complaint">
+    <div class="complaint-wrapper">
+      <div class="complaint-info reveal">
+        <span class="section-tag">Report Now</span>
+        <h2>File Your Water Complaint</h2>
+        <p>Your report helps us protect community health. All submissions are confidential and acted upon within 24 hours.</p>
+        <ul class="info-list">
+          <li>
+            <span class="check-icon">✓</span>
+            Free water quality testing on request
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Real-time SMS & email updates
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Escalation to senior officials if unresolved
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            Anonymous reporting option available
+          </li>
+        </ul>
+      </div>
+      <form class="complaint-form glass reveal" id="complaintForm" data-delay="200">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="area">Area / Ward</label>
+            <input type="text" id="area" name="area" placeholder="Ward number or locality" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Full Address</label>
+          <input type="text" id="address" name="address" placeholder="Street, landmark, pin code" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Complaint Category</label>
+            <select id="category" name="category" required>
+              <option value="">Select category</option>
+              <option value="contamination">Water Contamination</option>
+              <option value="supply">Supply Disruption</option>
+              <option value="pipeline">Pipeline Damage</option>
+              <option value="quality">Quality Testing Request</option>
+              <option value="billing">Billing Issue</option>
+              <option value="sewage">Sewage / Flood Mix</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority Level</label>
+            <select id="priority" name="priority" required>
+              <option value="">Select priority</option>
+              <option value="critical">Critical — Health Risk</option>
+              <option value="high">High — Immediate Action</option>
+              <option value="medium">Medium — Within 48 hrs</option>
+              <option value="low">Low — General Inquiry</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description">Describe the Issue</label>
+          <textarea id="description" name="description" rows="4" placeholder="Provide details: when did it start, color/smell of water, affected households..." required></textarea>
+        </div>
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <span class="checkmark"></span>
+            Submit anonymously (contact details kept confidential)
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Submit Complaint</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="track-section" id="track">
+    <div class="track-container glass reveal">
+      <div class="track-content">
+        <span class="section-tag">Track Status</span>
+        <h2>Check Your Complaint Status</h2>
+        <p>Enter your reference ID to see real-time progress on your water complaint.</p>
+      </div>
+      <form class="track-form" id="trackForm">
+        <input type="text" id="trackId" placeholder="Enter Reference ID (e.g. AQ-2024-4821)" required>
+        <button type="submit" class="btn btn-primary">Track Now</button>
+      </form>
+      <div class="track-result hidden" id="trackResult">
+        <div class="result-header">
+          <span class="result-id" id="resultId"></span>
+          <span class="result-status" id="resultStatus"></span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="result-steps" id="resultSteps"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-grid">
+      <div class="contact-card glass reveal" data-delay="0">
+        <div class="contact-icon">📞</div>
+        <h3>Helpline</h3>
+        <p>1800-123-4567</p>
+        <span>Available 24/7</span>
+      </div>
+      <div class="contact-card glass reveal" data-delay="100">
+        <div class="contact-icon">✉️</div>
+        <h3>Email</h3>
+        <p>support@aquaguard.gov.in</p>
+        <span>Response within 4 hours</span>
+      </div>
+      <div class="contact-card glass reveal" data-delay="200">
+        <div class="contact-icon">📍</div>
+        <h3>Office</h3>
+        <p>Water Board HQ, Sector 5</p>
+        <span>Mon–Sat, 9 AM – 6 PM</span>
+      </div>
+      <div class="contact-card glass reveal" data-delay="300">
+        <div class="contact-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <p>+91 98765 43210</p>
+        <span>Chat support available</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-info-home" id="project-info">
+    <div class="project-hero-content reveal">
+      <span class="section-tag">Community Service Mini-Project</span>
+      <h2 class="project-main-title">
+        DRINKING WATER COMPLAINT
+        <span class="gradient-text">MOBILE APP</span>
+      </h2>
+      <p class="project-category glass">11. Water and Sanitation Apps (121-130)</p>
+    </div>
+
+    <div class="project-details-section">
+      <div class="project-details-card glass reveal">
+        <div class="project-details-grid">
+          <div class="detail-item reveal" data-delay="0">
+            <span class="detail-label">Project Title</span>
+            <p class="detail-value">Drinking Water Complaint Mobile App</p>
+          </div>
+          <div class="detail-item reveal" data-delay="100">
+            <span class="detail-label">Project Type</span>
+            <p class="detail-value">Community Service Mini-Project</p>
+          </div>
+          <div class="detail-item reveal" data-delay="200">
+            <span class="detail-label">Student</span>
+            <p class="detail-value">SANA NANDHA KISHOR</p>
+          </div>
+          <div class="detail-item reveal" data-delay="300">
+            <span class="detail-label">Hall Ticket</span>
+            <p class="detail-value">31A6</p>
+          </div>
+          <div class="detail-item reveal" data-delay="400">
+            <span class="detail-label">Batch</span>
+            <p class="detail-value">CSP XIX Batch - B Section Batch-IX</p>
+          </div>
+          <div class="detail-item reveal" data-delay="500">
+            <span class="detail-label">Guide</span>
+            <p class="detail-value">Mrs. B Drakshayani</p>
+          </div>
+          <div class="detail-item detail-full reveal" data-delay="600">
+            <span class="detail-label">Category</span>
+            <p class="detail-value">11. Water and Sanitation Apps (121-130)</p>
+          </div>
+        </div>
+
+        <div class="project-summary reveal" data-delay="700">
+          <h3>About This Project</h3>
+          <p>
+            This Drinking Water Complaint Mobile App is a community service mini-project designed to help citizens
+            report water-related issues such as contamination, supply disruption, pipeline damage, and quality concerns.
+            The web portal provides an easy way to file complaints, track status, and connect with water board services
+            for faster resolution and safer drinking water in the community.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-gallery-section">
+      <div class="section-header reveal">
+        <span class="section-tag">Project Gallery</span>
+        <h2>Project Screenshots &amp; Images</h2>
+        <p>Visual documentation of the Drinking Water Complaint Mobile App project.</p>
+      </div>
+
+      <div class="project-gallery">
+        <figure class="gallery-item glass reveal" data-delay="0">
+          <img src="image1.jpeg" alt="Drinking Water Complaint App - Home Screen">
+          <figcaption>App Home Screen</figcaption>
+        </figure>
+        <figure class="gallery-item glass reveal" data-delay="100">
+          <img src="image2.jpeg" alt="Drinking Water Complaint App - File Complaint Page">
+          <figcaption>File Complaint Page</figcaption>
+        </figure>
+        <figure class="gallery-item glass reveal" data-delay="200">
+          <img src="image3.jpeg" alt="Drinking Water Complaint App - Track Status">
+          <figcaption>Track Complaint Status</figcaption>
+        </figure>
+        <figure class="gallery-item glass reveal" data-delay="300">
+          <img src="4.jpeg" alt="Drinking Water Complaint App - Water Quality Info">
+          <figcaption>Water Quality Information</figcaption>
+        </figure>
+        <figure class="gallery-item glass reveal" data-delay="400">
+          <img src="image5.jpeg" alt="Drinking Water Complaint App - Services Section">
+          <figcaption>Services &amp; Categories</figcaption>
+        </figure>
+        <figure class="gallery-item glass reveal" data-delay="500">
+          <img src="5.jpeg" alt="Drinking Water Complaint App - Project Overview">
+          <figcaption>Project Overview</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal hidden" id="successModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass">
+      <div class="modal-icon">✅</div>
+      <h3>Complaint Submitted Successfully!</h3>
+      <p>Your reference ID is:</p>
+      <div class="ref-id" id="refIdDisplay"></div>
+      <p class="modal-note">Save this ID to track your complaint status. A confirmation has been sent to your phone and email.</p>
+      <button class="btn btn-primary" id="closeModal">Got It</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
